@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lucky Tarot</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#f8c8dc,#d8b4fe);display:flex;justify-content:center;align-items:center;height:100vh}
+.card{background:#fff;border-radius:20px;padding:30px;max-width:360px;width:90%;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+h1{color:#c026d3}#tarot{font-size:28px;margin:10px 0}#msg{font-size:20px;color:#444;min-height:60px}
+button{background:#db2777;color:#fff;border:none;padding:12px 20px;border-radius:999px;font-size:16px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🔮 Lucky Tarot</h1>
+<div id="tarot"></div>
+<div id="msg"></div><br>
+<button onclick="draw()">🃏 Draw a Card</button>
+</div>
+<script>
+const cards=["🌞 The Sun","⭐ The Star","🍀 The Clover","🌙 The Moon","🦋 The Butterfly","🌈 The Rainbow","👑 The Crown","💎 The Diamond","🌸 The Blossom","🔥 The Phoenix"];
+const msgs=[
+"Today is your lucky day!","Believe in yourself.","Keep shining.","You are stronger than you think.","Smile! Great things are coming.","Good luck is with you today.","Never stop dreaming.","Stay positive.","Happiness begins with you.","You are enough.","Better days are ahead.","Be proud of yourself.","Wonderful surprises await you.","Trust the journey.","You deserve happiness.","Every effort counts.","Stay brave.","Keep moving forward.","You inspire others.","Your future is bright.","Believe in miracles.","Dream big.","You are loved.","Stay hopeful.","Keep smiling.","Shine wherever you go.","Your kindness matters.","Every day is a new beginning.","Choose joy.","Be your own sunshine.","Stay confident.","Your dreams are worth it.","Success is coming.","You are unstoppable.","Stay grateful.","Keep your heart open.","Everything will work out.","Be fearless.","Enjoy today.","Stay curious.","You are making progress.","The best is yet to come.","Great things take time.","A lucky surprise is waiting for you.","You are one of a kind.","Keep believing.","Make today amazing.","Stay true to yourself.","Thank you for being you.","Wishing you endless happiness!"];
+function draw(){
+document.getElementById('tarot').textContent=cards[Math.floor(Math.random()*cards.length)];
+document.getElementById('msg').textContent=msgs[Math.floor(Math.random()*msgs.length)];
+}
+draw();
+</script>
+</body></html>
